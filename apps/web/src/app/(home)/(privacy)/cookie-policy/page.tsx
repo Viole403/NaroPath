@@ -1,7 +1,7 @@
 import { Button } from "@workspace/ui/components/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
+import { cn } from "@workspace/ui/lib/utils"
 
 // Neubrutalism style constants
 const NEOBRUTALISM = {
