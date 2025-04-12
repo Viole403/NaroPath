@@ -115,10 +115,10 @@ export function Navbar() {
                 <Link href="/support" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   Support
                 </Link>
-                <Link href="#faq" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/faq" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   FAQ
                 </Link>
-                <Link href="#testimonials" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/testimonials" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   Testimonials
                 </Link>
               </div>
