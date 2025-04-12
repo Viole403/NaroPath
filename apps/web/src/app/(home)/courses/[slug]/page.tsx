@@ -6,8 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { BookOpen, Clock, BarChart, Users, CheckCircle2, ArrowLeft, Star, LucideShare2, CircleDollarSign, Award, Download } from "lucide-react"
 
-import { Navbar } from "@/src/components/home/Navbar"
-import { Footer } from "@/src/components/home/Footer"
 import CourseBreadcrumbs from "@/src/components/courses/CourseBreadcrumbs"
 import CourseGrid from "@/src/components/courses/CourseGrid"
 import { Container } from "@/src/components/ui/container"
@@ -16,8 +14,7 @@ import { Badge } from "@workspace/ui/components/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@workspace/ui/components/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 
-import { Course } from "@/src/types/course"
-import { getCourseBySlug, getSimilarCourses } from "@/src/lib/course-data"
+import { Course, getCourseBySlug, getSimilarCourses } from "@/src/lib/course-data"
 import { formatPrice, cn } from "@/src/lib/utils"
 
 // Neubrutalism style constants
@@ -99,7 +96,6 @@ export default function CourseDetailPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex flex-col">
-        <Navbar />
         <Container className="flex-1 flex items-center justify-center">
           <div className={cn(
             "p-8 text-center",
@@ -111,7 +107,6 @@ export default function CourseDetailPage() {
             <p className="font-bold text-xl uppercase">Loading Course...</p>
           </div>
         </Container>
-        <Footer />
       </div>
     )
   }
@@ -119,7 +114,6 @@ export default function CourseDetailPage() {
   if (!course) {
     return (
       <div className="min-h-screen flex flex-col">
-        <Navbar />
         <main className="flex-1">
           <Container className="py-12 flex flex-col items-center justify-center">
             <div className={cn(
@@ -145,7 +139,6 @@ export default function CourseDetailPage() {
             </div>
           </Container>
         </main>
-        <Footer />
       </div>
     )
   }
@@ -210,7 +203,6 @@ export default function CourseDetailPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar />
       <main className="flex-1">
         {/* Breadcrumbs */}
         <div className="border-y-2 border-black bg-gray-50">
@@ -613,7 +605,6 @@ export default function CourseDetailPage() {
           </div>
         </Container>
       </main>
-      <Footer />
     </div>
   )
 }

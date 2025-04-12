@@ -1,15 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Navbar } from "@/src/components/home/Navbar"
-import { Footer } from "@/src/components/home/Footer"
 import CourseBreadcrumbs from "@/src/components/courses/CourseBreadcrumbs"
 import CourseGrid from "@/src/components/courses/CourseGrid"
 import CourseFilters from "@/src/components/courses/CourseFilters"
 import CourseSearch from "@/src/components/courses/CourseSearch"
 import { Container } from "@/src/components/ui/container"
-import { getCourses } from "@/src/lib/course-data"
-import { Course } from "@/src/types/course"
+import { Course, getCourses } from "@/src/lib/course-data"
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState<Course[]>([])
@@ -112,7 +109,6 @@ export default function CoursesPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-1">
         {/* Header */}
         <section className="relative bg-gradient-to-b from-muted/50 to-background py-16 overflow-hidden">
@@ -191,7 +187,6 @@ export default function CoursesPage() {
           </Container>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

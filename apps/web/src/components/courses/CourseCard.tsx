@@ -4,7 +4,7 @@ import { Clock, Star, Users } from 'lucide-react';
 
 import { formatPrice } from '@/src/lib/utils';
 import { Badge } from '@workspace/ui/components/badge';
-import { Course } from '@/src/types/course';
+import { Course } from '@/src/lib/course-data';
 
 interface CourseCardProps {
   course: Course;

@@ -1,4 +1,4 @@
-import { Course } from '@/src/types/course';
+import { Course } from '@/src/lib/course-data';
 import { CourseCard } from './CourseCard';
 import { Skeleton } from '@workspace/ui/components/skeleton';
 import { CourseCardSkeleton } from './CourseCardSkeleton';

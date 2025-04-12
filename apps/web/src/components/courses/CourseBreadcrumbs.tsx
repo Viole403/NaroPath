@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BreadcrumbItem } from "@/src/types/course";
+import { BreadcrumbItem } from "@/src/lib/course-data";
 import { cn } from "@/src/lib/utils";
 import { ChevronRight } from "lucide-react";
 
