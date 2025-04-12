@@ -26,17 +26,21 @@ const NEOBRUTALISM = {
   }
 }
 
-type BlogPageProps = {
-  searchParams?: {
-    tag?: string
-  }
+interface BlogPageProps {
+  params: Promise<{}>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export default async function BlogPage({
+  params,
   searchParams,
 }: BlogPageProps) {
+  // Await both params and searchParams
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
+
   // Extract searchParams safely as a separate variable
-  const tagFilter = searchParams ? searchParams.tag : undefined
+  const tagFilter = resolvedSearchParams?.tag as string | undefined;
 
   // Get all posts, filtered by tag if provided
   const posts = await getAllPosts({

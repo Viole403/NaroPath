@@ -48,20 +48,34 @@ const getAvatarUrl = (name: string) => {
   return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random&size=128`;
 };
 
-interface BlogPostPageProps {
-  params: {
-    slug: string
-  }
+type BlogPostPageProps = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  // Get the slug directly from params
-  const slug = params?.slug;
+export default async function BlogPostPage({
+  params,
+  searchParams,
+}: BlogPostPageProps) {
+  // Await both params and searchParams
+  const { slug } = await params;
+  const resolvedSearchParams = await searchParams;
 
+  // Get the post by slug
   const post = await getPostBySlug(slug)
 
   if (!post) {
-    return notFound()
+    return (
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <p className="text-xl mb-8">The post you're looking for doesn't exist.</p>
+          <Link href="/blog" className="text-blue-600 hover:underline">
+            Return to Blog
+          </Link>
+        </div>
+      </div>
+    )
   }
 
   const similarPosts = await getSimilarPosts(post.id, 3)

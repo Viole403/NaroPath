@@ -22,8 +22,21 @@ const NEOBRUTALISM = {
   }
 }
 
-export default async function SupportArticlePage({ params }: { params: { slug: string } }) {
-  const article: SupportArticle | undefined = await getArticleBySlug(params.slug)
+type SupportArticlePageProps = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function SupportArticlePage({
+  params,
+  searchParams,
+}: SupportArticlePageProps) {
+  // Await the params to get the slug
+  const { slug } = await params;
+  await searchParams; // Await searchParams to satisfy the type
+
+  // Get the article by slug
+  const article: SupportArticle | undefined = await getArticleBySlug(slug)
 
   if (!article) {
     return (
