@@ -52,12 +52,6 @@ export default async function BlogPage({
 
   return (
     <BlogLayout>
-      {/* Blog Header */}
-      <BlogHeader
-        title="Blog"
-        description="Explore our collection of articles, tutorials, and insights"
-      />
-
       {/* Blog Content */}
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
