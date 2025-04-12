@@ -1,12 +1,17 @@
 {
-  "name": "shadcn-ui-monorepo",
+  "name": "naropath",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:api": "turbo dev --filter=api",
+    "dev:web": "turbo dev --filter=web",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push",
+    "db:studio": "turbo run db:studio"
   },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
@@ -18,5 +23,10 @@
   "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react-error-boundary": "^5.0.0",
+    "tailwind-merge": "^3.0.1"
   }
 }
