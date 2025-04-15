@@ -5,6 +5,7 @@ import { cn } from "@/src/lib/utils"
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@workspace/ui/components/button"
+import Link from "next/link"
 
 // Neubrutalism style constants
 const NEOBRUTALISM = {
@@ -262,6 +263,17 @@ export default function TestimonialsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
+        {/* Breadcrumbs */}
+        <div className="border-y-2 border-black bg-gray-50">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center gap-2 text-sm font-bold">
+              <Link href="/" className="hover:text-primary">Home</Link>
+              <span>/</span>
+              <span className="text-muted-foreground">Testimonials</span>
+            </div>
+          </div>
+        </div>
+
         {/* Header Section */}
         <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
