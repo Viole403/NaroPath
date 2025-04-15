@@ -144,7 +144,7 @@ export function Navbar() {
                 className="bg-primary text-primary-foreground border-2 border-black shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,0.8)] hover:translate-y-0.5 hover:translate-x-0.5 hover:shadow-none transition-all font-bold"
                 asChild
               >
-                <Link href="/signup">Sign Up</Link>
+                <Link href="/register">Register</Link>
               </Button>
             </div>
 
@@ -267,7 +267,7 @@ export function Navbar() {
                 className="w-full bg-primary text-primary-foreground border-2 border-black shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,0.8)] font-bold"
                 asChild
               >
-                <Link href="/signup" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
+                <Link href="/register" onClick={() => setIsMenuOpen(false)}>Register</Link>
               </Button>
             </div>
           </nav>
