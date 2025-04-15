@@ -79,8 +79,8 @@ export function Footer() {
               <FooterLink href="/courses" label="All Courses" />
               <FooterLink href="/about" label="About Us" />
               <FooterLink href="/instructors" label="Our Instructors" />
-              <FooterLink href="/pricing" label="Pricing Plans" />
-              <FooterLink href="/blog" label="Blog & Resources" />
+              <FooterLink href="/blog" label="Blog" />
+              <FooterLink href="/resources" label="Resources" />
               <FooterLink href="/contact" label="Contact Us" />
             </nav>
           </div>
