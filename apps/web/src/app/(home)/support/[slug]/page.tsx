@@ -76,6 +76,19 @@ export default async function SupportArticlePage({
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
+        {/* Breadcrumbs */}
+        <div className="border-y-2 border-black bg-gray-50">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center gap-2 text-sm font-bold">
+              <Link href="/" className="hover:text-primary">Home</Link>
+              <span>/</span>
+              <Link href="/support" className="hover:text-primary">Support</Link>
+              <span>/</span>
+              <span className="text-muted-foreground">{article.title}</span>
+            </div>
+          </div>
+        </div>
+
         {/* Back Button */}
         <div className="container mx-auto px-4 py-6">
           <Link

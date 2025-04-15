@@ -30,7 +30,17 @@ export default async function SupportPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-1">
+        {/* Breadcrumbs */}
+        <div className="border-y-2 border-black bg-gray-50">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center gap-2 text-sm font-bold">
+              <Link href="/" className="hover:text-primary">Home</Link>
+              <span>/</span>
+              <span className="text-muted-foreground">Support</span>
+            </div>
+          </div>
+        </div>
+
         {/* Header Section */}
         <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
@@ -269,7 +279,6 @@ export default async function SupportPage() {
             </div>
           </div>
         </section>
-      </main>
     </div>
   )
 }
