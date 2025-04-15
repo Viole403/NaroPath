@@ -57,7 +57,19 @@ const event = {
   ]
 }
 
-export default function EventPage({ params }: { params: { slug: string } }) {
+type EventPageProps = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function EventPage({
+  params,
+  searchParams,
+}: EventPageProps) {
+  // Await both params and searchParams
+  const { slug } = await params;
+  await searchParams; // Await searchParams to satisfy the type
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-16">
