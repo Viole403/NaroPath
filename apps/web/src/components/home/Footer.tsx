@@ -142,9 +142,9 @@ export function Footer() {
             © {new Date().getFullYear()} BloggerUp. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-6 text-sm">
-            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
             <Link href="/accessibility" className="hover:text-primary transition-colors">Accessibility</Link>
           </div>
         </div>
