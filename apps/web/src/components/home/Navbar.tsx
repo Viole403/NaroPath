@@ -53,19 +53,16 @@ export function Navbar() {
               </button>
 
               <div className="absolute left-0 mt-2 w-48 p-2 hidden group-hover:block border-2 border-black bg-background/90 backdrop-blur-md rounded-lg shadow-[0.35rem_0.35rem_0px_0px_rgba(0,0,0,0.8)]">
-                <Link href="/courses" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
-                  Explore Programs
+                <Link href="/programs/e-learning" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                  E-learning
                 </Link>
-                <Link href="/live-classes" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/programs/live-classes" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   Live Classes
                 </Link>
-                <Link href="/certifications" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/programs/certifications" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   Certifications
                 </Link>
-                <Link href="/events" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
-                  Events
-                </Link>
-                <Link href="/bootcamp" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/programs/bootcamp" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   Bootcamp
                 </Link>
               </div>
@@ -79,11 +76,11 @@ export function Navbar() {
               </button>
 
               <div className="absolute left-0 mt-2 w-64 p-2 hidden group-hover:block border-2 border-black bg-background/90 backdrop-blur-md rounded-lg shadow-[0.35rem_0.35rem_0px_0px_rgba(0,0,0,0.8)]">
-                <Link href="/international-scholarships" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">International Scholarships</Link>
-                <Link href="/ngo-scholarships" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/scholarships/international-scholarships" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">International Scholarships</Link>
+                <Link href="/scholarships/ngo-scholarships" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   NGO Funded Programs
                 </Link>
-                <Link href="/government-programs" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
+                <Link href="/scholarships/government-programs" className="block px-4 py-2 hover:bg-primary/10 rounded-md transition-colors">
                   Government Programs
                 </Link>
               </div>
